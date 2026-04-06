@@ -174,10 +174,11 @@ export default function Home() {
               </h1>
 
               <p className="hero-text">
-                V SISSY Hair Salon sa profesionálna starostlivosť o vlasy spája s
-                estetikou, detailom a moderným ženským štýlom. Každá návšteva je
-                vedená s dôrazom na kvalitu, krásny výsledok a príjemný zážitok.
-              </p>
+  Už 23 rokov je SISSY kadernictvo miestom, kde sa spája skúsenosť,
+  cit pre detail a ženská elegancia. Každá návšteva je vedená s dôrazom
+  na krásny výsledok, profesionálny prístup a pocit, že ste v rukách
+  kaderníčok, ktoré svojej práci skutočne rozumejú.
+</p>
 
               <div className="hero-actions">
                 <a href="tel:+421908783282" className="btn btn-dark">
@@ -217,25 +218,29 @@ export default function Home() {
                 a precízna práca
               </h2>
 
-              <p>
-                V našom salóne kladieme dôraz na špičkovú estetiku, kvalitu a
-                individuálny prístup ku každej klientke. Každý detail má svoje miesto
-                a každý výsledok má pôsobiť harmonicky, elegantne a žensky.
-              </p>
+             <p>
+  V SISSY kaderníctvo veríme, že krásne vlasy sú výsledkom skúseností,
+  precíznej práce a citlivého prístupu ku každej klientke. Každému detailu
+  venujeme pozornosť tak, aby výsledok pôsobil elegantne, harmonicky
+  a prirodzene žensky.
+</p>
 
-              <p>
-                SISSY Hair Salon je priestor, kde sa stretáva príjemná atmosféra,
-                profesionálna práca a cit pre krásu. Pracujeme s dôrazom na moderné
-                techniky, čisté prevedenie a výsledok, ktorý pôsobí upravene,
-                luxusne a prirodzene zároveň.
-              </p>
+<p>
+  Už 23 rokov vytvárame v Šamoríne miesto, kde sa profesionálna starostlivosť
+  o vlasy spája s príjemnou atmosférou, modernou estetikou a dôrazom na kvalitu.
+  Naším cieľom nie je len upraviť vlasy, ale dopriať každej klientke pocit
+  krásy, istoty a sebavedomia.
+</p>
 
-              <p>
-                Pracujeme s produktmi <strong>L’Oréal Professionnel</strong> a{" "}
-                <strong>Mon Platin</strong>. Naše kaderníčky sa pravidelne
-                zúčastňujú odborných školení, aby prinášali moderné trendy,
-                profesionálne techniky a vysokú úroveň práce.
-              </p>
+<p>
+  V SISSY kaderníctvo pracujeme s profesionálnymi značkami
+  
+  <strong> L’Oréal Professionnel</strong> a <strong>Mon Platin</strong>.
+  Naše kaderníčky sa pravidelne vzdelávajú, sledujú nové trendy a zdokonaľujú
+  techniky farbenia, strihov aj stylingu, aby sme prinášali služby na vysokej
+  úrovni a výsledky, ktorým môžu klientky dôverovať.
+</p>
+
             </div>
 
             <div className="about-image-card">
