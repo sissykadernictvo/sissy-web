@@ -1,60 +1,107 @@
 const services = [
   {
-    number: "01",
+    label: "Farby a blond",
     title: "Farbenie, tónovanie a blond premeny",
-    text: "Profesionálne farbenie, tónovanie, zosvetľovanie, melír, balayage efekt, blond techniky a moderné farebné premeny s dôrazom na čistý, elegantný a ženský výsledok.",
+    text: "Precízna farebná práca pre klientky, ktoré chcú elegantný, čistý a profesionálny výsledok.",
+    items: ["farbenie", "tónovanie", "melír", "zosvetľovanie", "blond techniky"],
   },
   {
-    number: "02",
+    label: "Strih a styling",
     title: "Dámske strihy, fúkaná a styling",
-    text: "Dámske strihy, modelovanie účesu, fúkaná, žehlenie, vlny a finálny styling prispôsobený typu vlasov, tvári a celkovému štýlu klientky.",
+    text: "Úprava vlasov s dôrazom na ženskosť, tvar, pohyb a celkový dojem účesu.",
+    items: ["dámske strihy", "fúkaná", "žehlenie", "vlny", "finálny styling"],
   },
   {
-    number: "03",
+    label: "Špeciálne príležitosti",
     title: "Spoločenské a eventové účesy",
-    text: "Účesy na svadby, oslavy, plesy, fotenia, večerné akcie a iné výnimočné príležitosti, kde záleží na detailoch, výdrži a luxusnom dojme.",
+    text: "Účesy pre výnimočné momenty, kde záleží na detailoch, výdrži aj luxusnom dojme.",
+    items: ["svadby", "oslavy", "plesy", "večerné akcie", "fotenia"],
   },
   {
-    number: "04",
+    label: "Výživa vlasov",
     title: "Regeneračná starostlivosť",
-    text: "Hĺbková výživa, regenerácia, lesk, hebkosť, starostlivosť o poškodené vlasy a profesionálne ošetrenia pre zdravší vzhľad vlasov.",
+    text: "Profesionálna starostlivosť pre lesk, hebkosť, regeneráciu a zdravší vzhľad vlasov.",
+    items: ["hĺbková výživa", "regenerácia", "lesk", "hebkosť", "starostlivosť o poškodené vlasy"],
   },
   {
-    number: "05",
+    label: "Pre mužov aj deti",
     title: "Pánske a detské strihy",
-    text: "Pánske strihy, úprava vlasov pre mužov a detské strihy s dôrazom na precíznosť, pohodlie a prirodzený, upravený výsledok.",
+    text: "Presné a upravené strihy s dôrazom na pohodlie, prirodzenosť a čisté prevedenie.",
+    items: ["pánske strihy", "detské strihy", "úprava vlasov", "čisté línie", "praktický styling"],
   },
   {
-    number: "06",
-    title: "Trvalá, objem a individuálne služby",
-    text: "Objemové úpravy, trvalá a individuálne riešenia podľa typu vlasov a želaného výsledku, vždy s dôrazom na kvalitu a stav vlasov.",
+    label: "Individuálny prístup",
+    title: "Trvalá, objem a služby na mieru",
+    text: "Riešenia prispôsobené typu vlasov, želanému efektu a celkovému vzhľadu klientky.",
+    items: ["trvalá", "objemové úpravy", "individuálne riešenia", "konzultácia", "starostlivosť na mieru"],
+  },
+];
+
+const works = [
+  {
+    image: "/images/work-1.jpg",
+    alt: "Farbenie vlasov v SISSY kaderníctvo",
+  },
+  {
+    image: "/images/work-2.jpg",
+    alt: "Melír a blond premena",
+  },
+  {
+    image: "/images/work-3.jpg",
+    alt: "Elegantný styling vlasov",
+  },
+  {
+    image: "/images/work-4.jpg",
+    alt: "Premena vlasov v SISSY kaderníctvo",
+  },
+  {
+    image: "/images/work-5.jpg",
+    alt: "Dámsky účes po profesionálnej úprave",
+  },
+  {
+    image: "/images/work-6.jpg",
+    alt: "Lesklé a upravené vlasy po farbení",
+  },
+  {
+    image: "/images/work-7.jpg",
+    alt: "Moderný ženský účes",
+  },
+  {
+    image: "/images/work-8.jpg",
+    alt: "Výsledok práce v SISSY kaderníctvo",
   },
 ];
 
 const reviews = [
   {
-    text: "Maximálna spokojnosť, rýchlosť, cena a milé kaderníčky.",
-    author: "Dávid Peták",
+    text: "Príjemné prostredie, milý prístup a krásny výsledok.",
+    author: "Soňa Borončová",
+    highlight: "Milý prístup a výsledok",
   },
   {
     text: "Profesionalita, príjemné prostredie a výborný prístup k zákazníkom.",
     author: "Štefan Döméný",
-  },
-  {
-    text: "Veľmi spokojný s celou rodinkou.",
-    author: "Mgr. Radovan Levius",
+    highlight: "Profesionalita a atmosféra",
   },
   {
     text: "Opakovane spokojný s prístupom, cenou a hlavne výsledkom.",
     author: "Vojtech Krivda",
+    highlight: "Dôvera a spokojnosť",
+  },
+  {
+    text: "Maximálna spokojnosť, rýchlosť, cena a milé kaderníčky.",
+    author: "Dávid Peták",
+    highlight: "Rýchlosť a prívetivosť",
+  },
+  {
+    text: "Veľmi spokojný s celou rodinkou.",
+    author: "Mgr. Radovan Levius",
+    highlight: "Spokojnosť celej rodiny",
   },
   {
     text: "Veľmi odporúčam každému.",
     author: "Alex Sudar",
-  },
-  {
-    text: "Príjemné prostredie, milý prístup a krásny výsledok.",
-    author: "Soňa Borončová",
+    highlight: "Odporúčanie klienta",
   },
 ];
 
@@ -79,7 +126,7 @@ const products = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HairSalon",
-  name: "SISSY Hair Salon",
+  name: "SISSY kaderníctvo",
   image: "https://www.sissy.sk/logo-sissy.png",
   url: "https://www.sissy.sk",
   telephone: "+421908783282",
@@ -131,8 +178,8 @@ export default function Home() {
               <a href="#prace">Naše práce</a>
             </nav>
 
-            <a href="#top" className="brand-center" aria-label="SISSY Hair Salon">
-              <img src="/logo-sissy.png" alt="SISSY Hair Salon logo" />
+            <a href="#top" className="brand-center" aria-label="SISSY kaderníctvo">
+              <img src="/logo-sissy.png" alt="SISSY kaderníctvo logo" />
             </a>
 
             <nav className="desktop-nav desktop-nav-right" aria-label="Pravá navigácia">
@@ -174,11 +221,11 @@ export default function Home() {
               </h1>
 
               <p className="hero-text">
-  Už 23 rokov je SISSY kadernictvo miestom, kde sa spája skúsenosť,
-  cit pre detail a ženská elegancia. Každá návšteva je vedená s dôrazom
-  na krásny výsledok, profesionálny prístup a pocit, že ste v rukách
-  kaderníčok, ktoré svojej práci skutočne rozumejú.
-</p>
+                Už 23 rokov je SISSY kaderníctvo miestom, kde sa spája skúsenosť,
+                cit pre detail a ženská elegancia. Každá návšteva je vedená s dôrazom
+                na krásny výsledok, profesionálny prístup a pocit, že ste v rukách
+                kaderníčok, ktoré svojej práci skutočne rozumejú.
+              </p>
 
               <div className="hero-actions">
                 <a href="tel:+421908783282" className="btn btn-dark">
@@ -194,14 +241,14 @@ export default function Home() {
               <div className="hero-main-image">
                 <img
                   src="/images/hero-photo.jpg"
-                  alt="Interiér salónu SISSY Hair Salon"
+                  alt="Interiér salónu SISSY kaderníctvo"
                 />
               </div>
 
               <div className="hero-floating-image">
                 <img
                   src="/images/detail-photo.jpg"
-                  alt="Detail interiéru salónu SISSY Hair Salon"
+                  alt="Detail interiéru salónu SISSY kaderníctvo"
                 />
               </div>
             </div>
@@ -211,42 +258,46 @@ export default function Home() {
         <section className="section section-divider" id="onas">
           <div className="container about-grid">
             <div className="about-copy">
-              <p className="eyebrow">O SALÓNE</p>
-              <h2>
-                Luxusný štýl
-                <br />
-                a precízna práca
-              </h2>
+              <p className="eyebrow">O NÁS</p>
 
-             <p>
-  V SISSY kaderníctvo veríme, že krásne vlasy sú výsledkom skúseností,
-  precíznej práce a citlivého prístupu ku každej klientke. Každému detailu
-  venujeme pozornosť tak, aby výsledok pôsobil elegantne, harmonicky
-  a prirodzene žensky.
-</p>
+              <h2>Luxusný štýl, precízna práca a dôvera</h2>
 
-<p>
-  Už 23 rokov vytvárame v Šamoríne miesto, kde sa profesionálna starostlivosť
-  o vlasy spája s príjemnou atmosférou, modernou estetikou a dôrazom na kvalitu.
-  Naším cieľom nie je len upraviť vlasy, ale dopriať každej klientke pocit
-  krásy, istoty a sebavedomia.
-</p>
+              <p>
+                V SISSY kaderníctvo veríme, že krásne vlasy sú výsledkom skúseností,
+                precíznej práce a citlivého prístupu ku každej klientke. Každému detailu
+                venujeme pozornosť tak, aby výsledok pôsobil elegantne, harmonicky
+                a prirodzene žensky.
+              </p>
 
-<p>
-  V SISSY kaderníctvo pracujeme s profesionálnymi značkami
-  
-  <strong> L’Oréal Professionnel</strong> a <strong>Mon Platin</strong>.
-  Naše kaderníčky sa pravidelne vzdelávajú, sledujú nové trendy a zdokonaľujú
-  techniky farbenia, strihov aj stylingu, aby sme prinášali služby na vysokej
-  úrovni a výsledky, ktorým môžu klientky dôverovať.
-</p>
+              <p>
+                SISSY kaderníctvo je už 23 rokov miestom v Šamoríne, kde sa profesionálna
+                starostlivosť o vlasy spája s príjemnou atmosférou, modernou estetikou
+                a dôrazom na kvalitu. Naším cieľom nie je len upraviť vlasy, ale dopriať
+                každej klientke pocit krásy, istoty a sebavedomia.
+              </p>
 
+              <p>
+                Zakladateľkou a tvárou SISSY kaderníctvo je Silvia Gavlider, ktorá salón
+                pred 23 rokmi vytvorila s jasnou víziou budovať miesto, kde budú ženy,
+                muži aj rodiny dostávať nielen profesionálnu službu, ale aj ľudský prístup,
+                dôveru a starostlivosť na vysokej úrovni. Už viac ako dve desaťročia vedie
+                salón v Šamoríne v službe ľuďom, s dôrazom na poctivú prácu, krásny výsledok
+                a spokojnosť klientov.
+              </p>
+
+              <p>
+                V SISSY kaderníctvo pracujeme s profesionálnymi značkami
+                <strong> L’Oréal Professionnel</strong> a <strong>Mon Platin</strong>.
+                Naše kaderníčky sa pravidelne vzdelávajú, sledujú nové trendy a zdokonaľujú
+                techniky farbenia, strihov aj stylingu, aby sme prinášali služby na vysokej
+                úrovni a výsledky, ktorým môžu klientky dôverovať.
+              </p>
             </div>
 
             <div className="about-image-card">
               <img
                 src="/images/about-photo.jpg"
-                alt="Interiér a atmosféra salónu SISSY Hair Salon"
+                alt="Silvia Gavlider a atmosféra salónu SISSY kaderníctvo"
               />
             </div>
           </div>
@@ -265,44 +316,43 @@ export default function Home() {
             </div>
 
             <div className="services-grid services-grid-rich">
-              {services.map((service) => (
-                <article key={service.number} className="service-card service-card-rich">
-                  <span className="service-number">{service.number}</span>
+              {services.map((service, index) => (
+                <article key={index} className="service-card service-card-rich">
+                  <div className="service-card-top">
+                    <span className="service-label">{service.label}</span>
+                  </div>
+
                   <h3>{service.title}</h3>
                   <p>{service.text}</p>
+
+                  <ul className="service-list">
+                    {service.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="section section-divider" id="prace">
+        <section className="section section-divider works-section" id="prace">
           <div className="container">
-            <div className="section-head works-head">
-              <div>
-                <p className="eyebrow">NAŠE PRÁCE</p>
-                <h2>Premeny, farby a štýl</h2>
-              </div>
-
-              <p className="section-note">
-                Výsledky, ktoré sú viditeľné na prvý pohľad — elegantné odtiene,
-                čistá práca, ženský štýl a profesionálny finish.
+            <div className="section-head center">
+              <p className="eyebrow">NAŠE PRÁCE</p>
+              <h2>Premeny, farby a štýl</h2>
+              <p className="section-subtext">
+                Reálne výsledky našej práce — farbenie, blond premeny, styling,
+                elegantné účesy a ženské detaily, ktoré tvoria celkový dojem.
               </p>
             </div>
 
-            <div className="works-grid">
-              <div className="work-card work-large">
-                <img src="/images/work-1.jpg" alt="Farbenie vlasov SISSY Hair Salon" />
-              </div>
-              <div className="work-card">
-                <img src="/images/work-2.jpg" alt="Melír a blond premena" />
-              </div>
-              <div className="work-card">
-                <img src="/images/work-3.jpg" alt="Styling a elegantný účes" />
-              </div>
-              <div className="work-card work-wide">
-                <img src="/images/work-4.jpg" alt="Premena vlasov v SISSY Hair Salon" />
-              </div>
+            <div className="works-grid-rich">
+              {works.map((work, index) => (
+                <div key={index} className="work-card work-card-rich">
+                  <img src={work.image} alt={work.alt} />
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -372,15 +422,26 @@ export default function Home() {
               <p className="eyebrow">RECENZIE</p>
               <h2>Dôvera, ktorú si vážime</h2>
               <p className="section-subtext">
-                Skúsenosti klientov, ktorí ocenili náš prístup, atmosféru salónu a výslednú prácu.
+                To, čo si klienti všímajú najviac — profesionálny prístup,
+                príjemnú atmosféru, milé kaderníčky a výsledok, s ktorým odchádzajú spokojní.
               </p>
             </div>
 
-            <div className="reviews-grid">
+            <div className="reviews-grid reviews-grid-compact">
               {reviews.map((review, index) => (
-                <article key={index} className="review-card">
+                <article key={index} className="review-card review-card-compact">
+                  <div className="review-top">
+                    <span className="review-stars">★★★★★</span>
+                    <span className="review-badge">Overené hodnotenie</span>
+                  </div>
+
+                  <span className="review-highlight">{review.highlight}</span>
                   <p>“{review.text}”</p>
-                  <strong>{review.author}</strong>
+
+                  <div className="review-footer">
+                    <strong>{review.author}</strong>
+                    <span>Google recenzia</span>
+                  </div>
                 </article>
               ))}
             </div>
@@ -394,7 +455,7 @@ export default function Home() {
               <h2>Rezervujte si svoj termín</h2>
 
               <p className="contact-intro">
-                Radi vás privítame v SISSY Hair Salon v Šamoríne. Objednajte sa
+                Radi vás privítame v SISSY kaderníctvo v Šamoríne. Objednajte sa
                 telefonicky, kontaktujte nás online alebo nás sledujte na sociálnych sieťach.
               </p>
 
@@ -446,7 +507,7 @@ export default function Home() {
 
             <div className="map-card">
               <iframe
-                title="Mapa SISSY Hair Salon"
+                title="Mapa SISSY kaderníctvo"
                 src="https://www.google.com/maps?q=Hlavn%C3%A1%2015%2C%20%C5%A0amor%C3%ADn&z=15&output=embed"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -458,11 +519,11 @@ export default function Home() {
         <footer className="footer">
           <div className="container footer-inner">
             <div className="footer-brand">
-              <img src="/logo-sissy.png" alt="SISSY Hair Salon logo" />
+              <img src="/logo-sissy.png" alt="SISSY kaderníctvo logo" />
             </div>
 
             <div className="footer-copy">
-              <p>SISSY Hair Salon · Hlavná 15 · Šamorín · www.sissy.sk</p>
+              <p>SISSY kaderníctvo · Hlavná 15 · Šamorín · www.sissy.sk</p>
               <p>Luxusné kaderníctvo pre klientky a klientov zo Šamorína, Somorje a okolia.</p>
             </div>
           </div>
