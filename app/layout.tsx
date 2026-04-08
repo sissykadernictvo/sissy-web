@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-heading",
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600", "700"],
 });
 
 const inter = Inter({
@@ -14,9 +14,70 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SISSY Hair Salon | Kaderníctvo Šamorín",
+  metadataBase: new URL("https://www.sissy.sk"),
+  title: {
+    default: "SISSY kaderníctvo Šamorín | Farbenie, melír, strihy a styling",
+    template: "%s | SISSY kaderníctvo Šamorín",
+  },
   description:
-    "Luxusné kaderníctvo v Šamoríne. Farbenie, melír, strihy, vlasová starostlivosť a profesionálne produkty.",
+    "SISSY kaderníctvo v Šamoríne. Farbenie, melír, blond premeny, dámske, pánske a detské strihy, fúkaná, styling, spoločenské účesy a profesionálna starostlivosť o vlasy.",
+  keywords: [
+    "SISSY kaderníctvo",
+    "kaderníctvo Šamorín",
+    "kadernictvo Samorin",
+    "fodrászat Somorja",
+    "farbenie vlasov Šamorín",
+    "melír Šamorín",
+    "blond premeny Šamorín",
+    "dámsky strih Šamorín",
+    "pánsky strih Šamorín",
+    "detský strih Šamorín",
+    "spoločenský účes Šamorín",
+    "fúkaná Šamorín",
+    "styling Šamorín",
+    "kaderníctvo Somorja",
+  ],
+  alternates: {
+    canonical: "https://www.sissy.sk",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "SISSY kaderníctvo Šamorín",
+    description:
+      "Farbenie, melír, blond premeny, strihy, styling a profesionálna starostlivosť o vlasy v Šamoríne.",
+    url: "https://www.sissy.sk",
+    siteName: "SISSY kaderníctvo",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "SISSY kaderníctvo Šamorín",
+      },
+    ],
+    locale: "sk_SK",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SISSY kaderníctvo Šamorín",
+    description:
+      "Farbenie, melír, blond premeny, strihy, styling a profesionálna starostlivosť o vlasy v Šamoríne.",
+    images: ["/og-image.jpg"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +87,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sk">
-      <body className={`${cormorant.variable} ${inter.variable}`}>
+      <body className={`${playfair.variable} ${inter.variable}`}>
         {children}
       </body>
     </html>

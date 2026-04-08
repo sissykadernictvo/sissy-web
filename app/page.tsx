@@ -40,70 +40,22 @@ const services = [
 ];
 
 const works = [
-  {
-    image: "/images/work-1.jpg",
-    alt: "Farbenie vlasov v SISSY kaderníctvo",
-  },
-  {
-    image: "/images/work-2.jpg",
-    alt: "Melír a blond premena",
-  },
-  {
-    image: "/images/work-3.jpg",
-    alt: "Elegantný styling vlasov",
-  },
-  {
-    image: "/images/work-4.jpg",
-    alt: "Premena vlasov v SISSY kaderníctvo",
-  },
-  {
-    image: "/images/work-5.jpg",
-    alt: "Dámsky účes po profesionálnej úprave",
-  },
-  {
-    image: "/images/work-6.jpg",
-    alt: "Lesklé a upravené vlasy po farbení",
-  },
-  {
-    image: "/images/work-7.jpg",
-    alt: "Moderný ženský účes",
-  },
-  {
-    image: "/images/work-8.jpg",
-    alt: "Výsledok práce v SISSY kaderníctvo",
-  },
-  {
-    image: "/images/work-9.jpg",
-    alt: "Vlnitý styling a ženský vzhľad vlasov",
-  },
-  {
-    image: "/images/work-10.jpg",
-    alt: "Elegantná blond premena",
-  },
-  {
-    image: "/images/work-11.jpg",
-    alt: "Spoločenský účes v SISSY kaderníctvo",
-  },
-  {
-    image: "/images/work-12.jpg",
-    alt: "Luxusný výsledok farbenia vlasov",
-  },
-  {
-    image: "/images/work-13.jpg",
-    alt: "Prirodzený lesk a hebkosť vlasov po úprave",
-  },
-  {
-    image: "/images/work-14.jpg",
-    alt: "Moderný účes a profesionálny styling",
-  },
-  {
-    image: "/images/work-15.jpg",
-    alt: "Ženský účes s elegantným objemom",
-  },
-  {
-    image: "/images/work-16.jpg",
-    alt: "Profesionálna premena vlasov v SISSY kaderníctvo",
-  },
+  { image: "/images/work-1.jpg", alt: "Farbenie vlasov v SISSY kaderníctvo v Šamoríne" },
+  { image: "/images/work-2.jpg", alt: "Melír a blond premena v SISSY kaderníctvo" },
+  { image: "/images/work-3.jpg", alt: "Elegantný styling vlasov v SISSY kaderníctvo" },
+  { image: "/images/work-4.jpg", alt: "Premena vlasov v SISSY kaderníctvo" },
+  { image: "/images/work-5.jpg", alt: "Dámsky účes po profesionálnej úprave" },
+  { image: "/images/work-6.jpg", alt: "Lesklé a upravené vlasy po farbení" },
+  { image: "/images/work-7.jpg", alt: "Moderný ženský účes" },
+  { image: "/images/work-8.jpg", alt: "Výsledok práce v SISSY kaderníctvo" },
+  { image: "/images/work-9.jpg", alt: "Vlnitý styling a ženský vzhľad vlasov" },
+  { image: "/images/work-10.jpg", alt: "Elegantná blond premena" },
+  { image: "/images/work-11.jpg", alt: "Spoločenský účes v SISSY kaderníctvo" },
+  { image: "/images/work-12.jpg", alt: "Luxusný výsledok farbenia vlasov" },
+  { image: "/images/work-13.jpg", alt: "Prirodzený lesk a hebkosť vlasov po úprave" },
+  { image: "/images/work-14.jpg", alt: "Moderný účes a profesionálny styling" },
+  { image: "/images/work-15.jpg", alt: "Ženský účes s elegantným objemom" },
+  { image: "/images/work-16.jpg", alt: "Profesionálna premena vlasov v SISSY kaderníctvo" },
 ];
 
 const reviews = [
@@ -173,11 +125,17 @@ const products = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HairSalon",
+  "@id": "https://www.sissy.sk/#salon",
   name: "SISSY kaderníctvo",
-  image: "https://www.sissy.sk/logo-sissy.png",
+  alternateName: "Sissy kaderníctvo",
   url: "https://www.sissy.sk",
+  image: "https://www.sissy.sk/og-image.jpg",
+  logo: "https://www.sissy.sk/icon.png",
   telephone: "+421908783282",
   email: "kadernictvosissy@gmail.com",
+  description:
+    "SISSY kaderníctvo v Šamoríne. Farbenie, melír, blond premeny, dámske, pánske a detské strihy, styling, spoločenské účesy a profesionálna starostlivosť o vlasy.",
+  slogan: "Krása vlasov v elegantnom prevedení",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Hlavná 15",
@@ -185,14 +143,34 @@ const jsonLd = {
     postalCode: "931 01",
     addressCountry: "SK",
   },
-  areaServed: ["Šamorín", "Somorja", "Dunajská Streda", "okolie Šamorína"],
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 48.0307,
+    longitude: 17.3097,
+  },
+  founder: {
+    "@type": "Person",
+    name: "Silvia Gavlider",
+  },
+  areaServed: [
+    { "@type": "City", name: "Šamorín" },
+    { "@type": "City", name: "Somorja" },
+    { "@type": "City", name: "Dunajská Streda" },
+  ],
   priceRange: "€€",
-  sameAs: ["https://www.facebook.com/share/18MtKiPWxj/?mibextid=wwXIfr"],
+  paymentAccepted: "Cash, Card",
+  currenciesAccepted: "EUR",
+  sameAs: [
+    "https://www.facebook.com/share/18MtKiPWxj/?mibextid=wwXIfr",
+  ],
+  hasMap: "https://www.google.com/maps?q=Hlavn%C3%A1%2015%2C%20%C5%A0amor%C3%ADn&z=15&output=embed",
   makesOffer: services.map((service) => ({
     "@type": "Offer",
     itemOffered: {
       "@type": "Service",
       name: service.title,
+      description: service.text,
+      areaServed: "Šamorín",
     },
   })),
 };
@@ -286,14 +264,14 @@ export default function Home() {
               <div className="hero-main-image">
                 <img
                   src="/images/hero-photo.jpg"
-                  alt="Interiér salónu SISSY kaderníctvo"
+                  alt="Interiér SISSY kaderníctvo v Šamoríne"
                 />
               </div>
 
               <div className="hero-floating-image">
                 <img
                   src="/images/detail-photo.jpg"
-                  alt="Detail interiéru salónu SISSY kaderníctvo"
+                  alt="Detail interiéru SISSY kaderníctvo"
                 />
               </div>
             </div>
@@ -342,7 +320,7 @@ export default function Home() {
             <div className="about-image-card">
               <img
                 src="/images/about-photo.jpg"
-                alt="Silvia Gavlider a atmosféra salónu SISSY kaderníctvo"
+                alt="Silvia Gavlider a atmosféra SISSY kaderníctvo"
               />
             </div>
           </div>
@@ -354,9 +332,9 @@ export default function Home() {
               <p className="eyebrow">SLUŽBY</p>
               <h2>Starostlivosť, štýl a výsledok</h2>
               <p className="section-subtext">
-                Farbenie, melír, dámske, pánske aj detské strihy, fúkaná,
-                styling, spoločenské účesy, regenerácia, trvalá a profesionálna
-                starostlivosť o vlasy v Šamoríne.
+                Farbenie, melír, dámske, pánske aj detské strihy, fúkaná, styling,
+                spoločenské účesy, regenerácia, trvalá a profesionálna starostlivosť
+                o vlasy v Šamoríne.
               </p>
             </div>
 
@@ -472,8 +450,8 @@ export default function Home() {
               <p className="eyebrow">RECENZIE</p>
               <h2>Dôvera, ktorú si vážime</h2>
               <p className="section-subtext">
-                To, čo si klienti všímajú najviac — profesionálny prístup,
-                príjemnú atmosféru, milé kaderníčky a výsledok, s ktorým odchádzajú spokojní.
+                To, čo si klienti všímajú najviac — profesionálny prístup, príjemnú
+                atmosféru, milé kaderníčky a výsledok, s ktorým odchádzajú spokojní.
               </p>
             </div>
 
@@ -574,7 +552,7 @@ export default function Home() {
 
             <div className="footer-copy">
               <p>SISSY kaderníctvo · Hlavná 15 · Šamorín · www.sissy.sk</p>
-              <p>Luxusné kaderníctvo pre klientky a klientov zo Šamorína, Somorje a okolia.</p>
+              <p>Luxusné kaderníctvo pre klientky a klientov zo Šamorína, Samorin a okolia.</p>
             </div>
           </div>
         </footer>

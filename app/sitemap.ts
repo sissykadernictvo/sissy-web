@@ -1,18 +1,20 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+
   return [
     {
-      url: "https://sissy-web.vercel.app",
-      lastModified: new Date(),
+      url: "https://www.sissy.sk",
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: "https://sissy-web.vercel.app/cennik",
-      lastModified: new Date(),
+      url: "https://www.sissy.sk/cennik",
+      lastModified: now,
       changeFrequency: "weekly",
-      priority: 0.8,
+      priority: 0.9,
     },
   ];
 }

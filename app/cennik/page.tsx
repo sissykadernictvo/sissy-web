@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cenník služieb",
+  description:
+    "Orientačný cenník služieb SISSY kaderníctvo v Šamoríne. Farbenie, melír, fúkaná, trvalá, spoločenské účesy, pánske a detské strihy.",
+  alternates: {
+    canonical: "https://www.sissy.sk/cennik",
+  },
+};
 const categories = [
   {
     label: "Farby a blond",
