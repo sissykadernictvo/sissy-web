@@ -236,11 +236,11 @@ export default function Home() {
               <p className="eyebrow">PREMIUM KADERNÍCTVO V ŠAMORÍNE</p>
 
               <h1>
-                Krása vlasov
+               Profesionálna
                 <br />
-                v elegantnom
+               krása vlasov
                 <br />
-                prevedení
+               pre každý deň
               </h1>
 
               <p className="hero-text">
@@ -544,18 +544,57 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="footer">
-          <div className="container footer-inner">
-            <div className="footer-brand">
-              <img src="/logo-sissy.png" alt="SISSY kaderníctvo logo" />
-            </div>
+<footer className="footer">
+  <div className="container footer-inner footer-inner-rich">
+    <div className="footer-brand-block">
+      <div className="footer-brand">
+        <img src="/logo-sissy.png" alt="SISSY kaderníctvo logo" />
+      </div>
 
-            <div className="footer-copy">
-              <p>SISSY kaderníctvo · Hlavná 15 · Šamorín · www.sissy.sk</p>
-              <p>Luxusné kaderníctvo pre klientky a klientov zo Šamorína, Samorin a okolia.</p>
-            </div>
-          </div>
-        </footer>
+      <div className="footer-brand-copy">
+        <p className="footer-brand-title">SISSY kaderníctvo</p>
+        <p className="footer-brand-text">
+          Luxusné kaderníctvo v Šamoríne s dôrazom na krásny výsledok,
+          profesionálny prístup a príjemnú atmosféru.
+        </p>
+      </div>
+    </div>
+
+    <div className="footer-links">
+      <div className="footer-col">
+        <p className="footer-heading">Navigácia</p>
+        <a href="/">Domov</a>
+        <a href="/#sluzby">Služby</a>
+        <a href="/#prace">Naše práce</a>
+        <a href="/cennik">Cenník</a>
+      </div>
+
+      <div className="footer-col">
+        <p className="footer-heading">Kontakt</p>
+        <a href="tel:+421908783282">+421 908 783 282</a>
+        <a href="mailto:kadernictvosissy@gmail.com">kadernictvosissy@gmail.com</a>
+        <a
+          href="https://www.facebook.com/share/18MtKiPWxj/?mibextid=wwXIfr"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Facebook
+        </a>
+      </div>
+
+      <div className="footer-col">
+        <p className="footer-heading">Informácie</p>
+        <a href="/#kontakt">Kontaktujte nás</a>
+        <a href="/ochrana-osobnych-udajov">Ochrana osobných údajov</a>
+      </div>
+    </div>
+  </div>
+
+  <div className="container footer-bottom">
+    <p>© {new Date().getFullYear()} SISSY kaderníctvo. Všetky práva vyhradené.</p>
+    <p>Hlavná 15, Šamorín · www.sissy.sk</p>
+  </div>
+</footer>
       </main>
     </>
   );
