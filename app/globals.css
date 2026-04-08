@@ -272,7 +272,8 @@ img {
 .section-head h2,
 .products-section h2,
 .training-card h2,
-.contact-card h2 {
+.contact-card h2,
+.cennik-cta-card h2 {
   margin: 0;
   font-family: var(--font-heading), Georgia, serif;
   font-weight: 600;
@@ -366,7 +367,6 @@ img {
 .hero-floating-image img,
 .about-image-card img,
 .work-card img,
-.product-card-image img,
 .training-thumb img {
   width: 100%;
   height: 100%;
@@ -592,6 +592,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -616,13 +617,13 @@ img {
 
 .product-card-rich {
   display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 22px;
+  grid-template-columns: 170px 1fr;
+  gap: 24px;
   align-items: center;
 }
 
 .product-card-image {
-  height: 130px;
+  height: 138px;
   border-radius: 22px;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -630,14 +631,23 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 18px;
 }
 
 .product-card-image img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   object-position: center;
+}
+
+.product-card-image-featured {
+  padding: 8px;
+}
+
+.product-card-image-featured img {
+  transform: scale(1);
+  transform-origin: center;
 }
 
 .product-card-copy h3,
@@ -694,7 +704,7 @@ img {
 
 .reviews-grid-compact {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
 
@@ -714,8 +724,10 @@ img {
 }
 
 .review-card-compact {
-  padding: 24px;
+  padding: 22px;
   border-radius: 26px;
+  min-height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.76) 100%);
 }
 
 .review-top {
@@ -748,6 +760,13 @@ img {
   font-size: 13px;
   font-weight: 700;
   color: #1b1714;
+}
+
+.review-card-compact p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--muted);
 }
 
 .review-footer {
@@ -843,6 +862,146 @@ img {
   border: 0;
 }
 
+/* CENNÍK */
+
+.cennik-hero {
+  padding-top: 72px;
+  padding-bottom: 48px;
+}
+
+.cennik-note {
+  max-width: 920px;
+  margin: 28px auto 0;
+  padding: 18px 22px;
+  border-radius: 22px;
+  border: 1px solid rgba(183, 146, 95, 0.22);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 248, 240, 0.82) 100%);
+  color: #4d443d;
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.cennik-note strong {
+  color: #1b1714;
+}
+
+.cennik-section {
+  padding-top: 54px;
+}
+
+.cennik-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.price-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.78) 100%);
+  border: 1px solid rgba(17, 17, 17, 0.06);
+  border-radius: 32px;
+  padding: 30px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 56px rgba(17, 17, 17, 0.1);
+  border-color: rgba(183, 146, 95, 0.24);
+}
+
+.price-card-top {
+  margin-bottom: 22px;
+}
+
+.price-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.price-card h3 {
+  margin: 0;
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.08;
+  color: #1b1714;
+}
+
+.price-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.price-list li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: center;
+  padding: 14px 0;
+  border-top: 1px solid rgba(17, 17, 17, 0.06);
+}
+
+.price-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.price-list span {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #453d37;
+}
+
+.price-list strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111111;
+  white-space: nowrap;
+}
+
+.cennik-cta-section {
+  padding-top: 54px;
+}
+
+.cennik-cta-card {
+  max-width: 980px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(183, 146, 95, 0.14), rgba(255, 255, 255, 0.72));
+  border: 1px solid rgba(17, 17, 17, 0.07);
+  border-radius: 34px;
+  padding: 42px;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.cennik-cta-card h2 {
+  font-size: clamp(36px, 4.6vw, 64px);
+}
+
+.cennik-cta-card p {
+  max-width: 760px;
+  margin: 18px auto 0;
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.cennik-cta-card .contact-cta {
+  justify-content: center;
+  margin-top: 28px;
+}
+
 /* FOOTER */
 
 .footer {
@@ -893,6 +1052,10 @@ img {
   .works-grid-rich {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .reviews-grid-compact {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 1100px) {
@@ -913,8 +1076,9 @@ img {
 
 @media (max-width: 900px) {
   .works-grid-rich,
-  .reviews-grid-compact {
-    grid-template-columns: repeat(2, 1fr);
+  .reviews-grid-compact,
+  .cennik-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -977,7 +1141,8 @@ img {
   .product-card,
   .review-card,
   .contact-card,
-  .training-card {
+  .training-card,
+  .price-card {
     padding: 24px;
   }
 
@@ -999,14 +1164,62 @@ img {
   .review-card p,
   .contact-list p,
   .contact-intro,
-  .footer-copy p {
+  .footer-copy p,
+  .cennik-cta-card p {
     font-size: 16px;
     line-height: 1.75;
   }
 
   .service-card h3,
-  .product-card h3 {
+  .product-card h3,
+  .price-card h3 {
     font-size: 26px;
+  }
+
+  .product-card-rich {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .product-card-image {
+    height: 120px;
+    padding: 18px;
+  }
+
+  .product-card-image-featured {
+    padding: 10px;
+  }
+
+  .product-card-image-featured img {
+    transform: scale(1);
+  }
+
+  .cennik-hero {
+    padding-top: 54px;
+    padding-bottom: 36px;
+  }
+
+  .cennik-note {
+    margin-top: 22px;
+    padding: 16px 18px;
+    font-size: 14px;
+    line-height: 1.65;
+    text-align: left;
+  }
+
+  .price-list li {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .price-list span,
+  .price-list strong {
+    font-size: 15px;
+  }
+
+  .cennik-cta-card {
+    padding: 28px 24px;
   }
 
   .footer-inner {

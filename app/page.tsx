@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 const services = [
   {
     label: "Farby a blond",
@@ -70,13 +72,45 @@ const works = [
     image: "/images/work-8.jpg",
     alt: "Výsledok práce v SISSY kaderníctvo",
   },
+  {
+    image: "/images/work-9.jpg",
+    alt: "Vlnitý styling a ženský vzhľad vlasov",
+  },
+  {
+    image: "/images/work-10.jpg",
+    alt: "Elegantná blond premena",
+  },
+  {
+    image: "/images/work-11.jpg",
+    alt: "Spoločenský účes v SISSY kaderníctvo",
+  },
+  {
+    image: "/images/work-12.jpg",
+    alt: "Luxusný výsledok farbenia vlasov",
+  },
+  {
+    image: "/images/work-13.jpg",
+    alt: "Prirodzený lesk a hebkosť vlasov po úprave",
+  },
+  {
+    image: "/images/work-14.jpg",
+    alt: "Moderný účes a profesionálny styling",
+  },
+  {
+    image: "/images/work-15.jpg",
+    alt: "Ženský účes s elegantným objemom",
+  },
+  {
+    image: "/images/work-16.jpg",
+    alt: "Profesionálna premena vlasov v SISSY kaderníctvo",
+  },
 ];
 
 const reviews = [
   {
     text: "Príjemné prostredie, milý prístup a krásny výsledok.",
     author: "Soňa Borončová",
-    highlight: "Milý prístup a výsledok",
+    highlight: "Milý prístup a krásny výsledok",
   },
   {
     text: "Profesionalita, príjemné prostredie a výborný prístup k zákazníkom.",
@@ -84,9 +118,9 @@ const reviews = [
     highlight: "Profesionalita a atmosféra",
   },
   {
-    text: "Opakovane spokojný s prístupom, cenou a hlavne výsledkom.",
-    author: "Vojtech Krivda",
-    highlight: "Dôvera a spokojnosť",
+    text: "Opakovane spokojná s prístupom aj výsledkom. Vždy odchádzam spokojná.",
+    author: "Overená klientka",
+    highlight: "Spokojnosť pri každej návšteve",
   },
   {
     text: "Maximálna spokojnosť, rýchlosť, cena a milé kaderníčky.",
@@ -103,6 +137,16 @@ const reviews = [
     author: "Alex Sudar",
     highlight: "Odporúčanie klienta",
   },
+  {
+    text: "Krásna práca, príjemný personál a veľmi dobrý pocit z celého salónu.",
+    author: "Spokojná klientka",
+    highlight: "Práca aj atmosféra",
+  },
+  {
+    text: "Do salónu sa rada vraciam, vždy sa tu cítim príjemne a výsledok stojí za to.",
+    author: "Verná klientka",
+    highlight: "Dôvera a návratnosť",
+  },
 ];
 
 const products = [
@@ -110,16 +154,19 @@ const products = [
     title: "L’Oréal Professionnel",
     text: "Profesionálne riešenia pre farbenie, starostlivosť, ochranu vlasového vlákna a styling na vysokej úrovni. Značka, ktorej klientky dôverujú.",
     image: "/images/product-loreal.jpg",
+    featured: true,
   },
   {
     title: "Mon Platin",
     text: "Kvalitná vlasová kozmetika zameraná na lesk, hebkosť, regeneráciu a každodennú profesionálnu starostlivosť v salóne aj doma.",
     image: "/images/product-monplatin.jpg",
+    featured: false,
   },
   {
     title: "Starostlivosť na mieru",
     text: "Každé vlasy potrebujú individuálny prístup. Produkty a postupy vyberáme podľa kvality vlasov, farby, poškodenia a želaného výsledku.",
     image: "/images/product-care.jpg",
+    featured: false,
   },
 ];
 
@@ -140,9 +187,7 @@ const jsonLd = {
   },
   areaServed: ["Šamorín", "Somorja", "Dunajská Streda", "okolie Šamorína"],
   priceRange: "€€",
-  sameAs: [
-    "https://www.facebook.com/share/18MtKiPWxj/?mibextid=wwXIfr",
-  ],
+  sameAs: ["https://www.facebook.com/share/18MtKiPWxj/?mibextid=wwXIfr"],
   makesOffer: services.map((service) => ({
     "@type": "Offer",
     itemOffered: {
@@ -371,9 +416,14 @@ export default function Home() {
             <div className="product-list product-list-rich">
               {products.map((product) => (
                 <article key={product.title} className="product-card product-card-rich">
-                  <div className="product-card-image">
+                  <div
+                    className={`product-card-image ${
+                      product.featured ? "product-card-image-featured" : ""
+                    }`}
+                  >
                     <img src={product.image} alt={product.title} />
                   </div>
+
                   <div className="product-card-copy">
                     <h3>{product.title}</h3>
                     <p>{product.text}</p>
