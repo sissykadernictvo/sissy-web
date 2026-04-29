@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -53,23 +52,24 @@ export default function PrivacyPage() {
                 <a href="/#recenzie">Recenzie</a>
                 <a href="/#kontakt">Kontakt</a>
                 <a href="/ochrana-osobnych-udajov">Ochrana osobných údajov</a>
+                <a href="/cookies">Cookies</a>
               </div>
             </details>
           </div>
         </header>
 
         <section className="section">
-          <div className="container privacy-wrap">
+          <div className="container legal-wrap">
             <div className="section-head center">
               <p className="eyebrow">PRÁVNE INFORMÁCIE</p>
-              <h1 className="privacy-title">Ochrana osobných údajov</h1>
+              <h1 className="legal-title">Ochrana osobných údajov</h1>
               <p className="section-subtext">
                 Informácie o spracúvaní osobných údajov v súvislosti s webovou stránkou
                 a komunikáciou so salónom SISSY kaderníctvo.
               </p>
             </div>
 
-            <div className="privacy-card">
+            <div className="legal-card">
               <h2>1. Prevádzkovateľ</h2>
               <p>
                 Prevádzkovateľom osobných údajov je <strong>SISSY kaderníctvo</strong>,
@@ -89,7 +89,7 @@ export default function PrivacyPage() {
                 V prípade, že nás kontaktujete telefonicky, e-mailom alebo prostredníctvom
                 sociálnych sietí, môžeme spracúvať najmä tieto údaje:
               </p>
-              <ul className="privacy-list">
+              <ul className="legal-list">
                 <li>meno a priezvisko, ak nám ho poskytnete,</li>
                 <li>telefónne číslo,</li>
                 <li>e-mailovú adresu,</li>
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
 
               <h2>3. Účel spracúvania osobných údajov</h2>
               <p>Osobné údaje spracúvame najmä za účelom:</p>
-              <ul className="privacy-list">
+              <ul className="legal-list">
                 <li>komunikácie so zákazníkom,</li>
                 <li>vybavenia objednávky alebo rezervácie termínu,</li>
                 <li>odpovede na otázky a požiadavky,</li>
@@ -136,7 +136,7 @@ export default function PrivacyPage() {
 
               <h2>8. Vaše práva</h2>
               <p>Máte právo najmä na:</p>
-              <ul className="privacy-list">
+              <ul className="legal-list">
                 <li>prístup k svojim osobným údajom,</li>
                 <li>opravu nesprávnych údajov,</li>
                 <li>výmaz údajov, ak sú splnené zákonné podmienky,</li>
@@ -157,7 +157,7 @@ export default function PrivacyPage() {
                 <a href="tel:+421908783282">+421 908 783 282</a>
               </p>
 
-              <p className="privacy-note">
+              <p className="legal-note">
                 Tento text má informačný charakter a odporúča sa jeho finálna kontrola podľa
                 reálneho spôsobu objednávania, komunikácie a používaných služieb.
               </p>
