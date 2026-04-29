@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -88,6 +89,18 @@ export default function RootLayout({
   return (
     <html lang="sk">
       <body className={`${playfair.variable} ${inter.variable}`}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XFFQ84C898"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XFFQ84C898');
+          `}
+        </Script>
         {children}
       </body>
     </html>
